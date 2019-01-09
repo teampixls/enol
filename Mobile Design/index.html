@@ -1,0 +1,648 @@
+<html>
+<head>
+	<title>About the incident - Step One - eNol Prototype</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style - mobile.css" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<script>
+	$( function() {
+	$( "#datepicker" ).datepicker();
+	} );
+	</script>
+
+</head>
+
+
+<body>
+
+<header>
+	<div class="full">
+	<img src="images/logo.png" class="logo">
+	
+</div>
+
+</header>
+	
+<div>
+
+	<header class="breadcrumb">
+	<div class="full">
+	<div class="left step current"><span class="number">1</span><!-- About the incident --></div>
+	<div class="step"><span class="number">2</span><!-- About the damage --></div>	
+	<div class="step"><span class="number">3</span><!-- About you & your vehicle --></div>
+	<div class="step"><span class="number">4</span><!-- Next Steps --></div>
+	</header>
+	<div class="progress" id="myHeader"><div class="current" style="width:20%;"></div></div>
+</div>
+
+<div class="wrapper full">
+
+	<p>Please answer all questions as accurately as possible.</p>
+	
+<div class="main">
+
+<div class="section">
+	<h1><span>1/5</span><div>About your claim</div></h1>
+	
+<div class="questions">
+
+
+	<h4>What <em>type</em> of incident would you like to tell us about?
+	<input type="checkbox" id="info" data-related-item="help">
+	<label for="info">
+	<span class="info">i</span>
+	</label></h4>
+
+	<div class="section help">
+	<h1 id="help"><span class="info">i</span>Types of incident</h1>
+	<h4>Accident</h4>
+	<p>Your vehicle vehicle was involved in an accident. This can include incidents where you weren't in the vehicle at the time.</p>
+
+	<h4>Storm or flood</h4>
+	<p>Your  vehicle was damaged by bad weather e.g. a storm or a flood</p>
+
+	<h4>Broken glass</h4>
+	<p>Your vehicle's windscreen or window(s) are damaged</p>
+
+	<h4>Something else</h4>
+	<p>You need to tell us about something which is not described by the other options. (e.g vandalism, theft, fire or you have put the wrong type of fuel in you vehicle</p>
+
+	</div>
+
+	<input type="radio" id="accident" name="claimtype" checked>
+	<label for="accident" class="icon">
+	<img src="images/crash.png">
+	<p>An Accident</p>
+	</label>
+
+
+	<input type="radio" id="weather" name="claimtype">
+	<label for="weather" class="icon">
+	<img src="images/weather.png" style="vertical-align:top;">
+	<p>Storm or Flood Damage</p>
+	</label>
+
+	<input type="radio" id="glass" name="claimtype">
+	<label for="glass" class="icon">
+	<img src="images/glass.png">
+	<p>Broken Glass</p>
+	</label>
+
+
+	<input type="radio" id="claimtypeother" name="claimtype">
+	<label for="claimtypeother" class="icon">
+	<img src="images/other.png">
+	<p>Something Else</p>
+	</label>
+
+				
+
+<div>
+
+	<h4>What type of <em>accident</em> has happened? <span class="info">i</span></h4>
+
+	<input type="radio" id="person" name="accidenttype">
+	<label for="person" class="icon">
+	<img src="images/cyclist.png" style="vertical-align:top;">
+	<p>An Accident with a person</p>
+	<sub>Your vehicle was involved in an accident with a person not in a car (e.g. a pedestrian or cyclist).</sub>
+	</label>
+
+
+	<input type="radio" id="animal" name="accidenttype" checked>
+	<label for="animal" class="icon">
+	<img src="images/animal.png" style="vertical-align:top;">
+	<p>an accident with an animal</p>
+	<sub>Your vehicle was involved in a collision with an animal.</sub>
+	</label>
+
+	<input type="radio" id="immobile" name="accidenttype">
+	<label for="immobile" class="icon">
+	<img src="images/immobile.png" style="vertical-align:top;">
+	<p>an accident with an object or property</p>
+	</label>
+
+	<input type="radio" id="vehicles" name="accidenttype">
+	<label for="vehicles" class="icon">
+	<img src="images/crash.png" style="vertical-align:top;">
+	<p>an accident with another vehicle(s)</p>
+	</label>
+
+	<input type="radio" id="parked" name="accidenttype">
+	<label for="parked" class="icon">
+	<img src="images/parking.png" style="vertical-align:top;">
+	<p>My vehicle was DAMAGED WHILST PARKED</p>
+	</label>
+
+	<input type="radio" id="accidentother" name="accidenttype">
+	<label for="accidentother" class="icon">
+	<img src="images/other.png">
+	<p>Something Else</p>
+	</label>
+
+
+</div>
+
+
+<div>
+	<h4>Were any <em>people</em> injured?<span class="info">i</span></h4>
+
+	<input type="radio" id="injyes" name="Injury">
+	<label for="injyes" class="options">YES, I think so</label>
+
+	<input type="radio" id="injno" name="Injury">
+	<label for="injno" id="openwhen" class="options">NO</label>
+
+	<input type="radio" id="injunsure" name="Injury"  onclick="myFunction()">
+	<label for="injunsure" id="openwhen" class="options">I don't know</label>
+</div>
+			
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+			
+<div class="section">
+
+	<h1 id="when"><span>2/5</span><div>When and where did this happen?</div></h1>
+
+<div class="questions">
+
+	<h4><em>When</em> did this happen?<span class="info">i</span></h4>
+
+<div class="inline">
+
+	<h4 class="label">Date</h4>
+	<input type="text" id="datepicker" required>
+	<img src="images/datepicker.png" style="position: relative; left:5px; top: 2px;">
+
+</div>
+
+<div class="inline">
+
+	<h4 class="label">Time (optional)</h4>
+	<input id="time" type="time" required>
+
+</div>						
+	<h4><em>Where</em> did this happen?<span class="info">i</span></h4>
+	<img src="images/mapmobile.png" style="margin-left: -29px; margin-bottom: 20px;">
+	<input type="radio" id="dateconfirm" name="date"  data-related-item="policy1" checked>
+	<label for="dateconfirm" id="openheadpolicy" class="options sienna">Confirm date & location</label>
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+<div class="section">
+	<h1 id="headpolicy"><span>3/5</span><div>About your policy</div></h1>
+
+<div class="questions">		
+
+	<h4>Which <em>policy</em> would you like to record this incident against?<span class="info">i</span></h4>
+
+	<input type="radio" id="policy1" name="policy" data-related-item="policydetsconfirm">
+	<label for="policy1" class="icon two">
+	<img src="images/motor.png">
+	<p>Policy no: ABC1234</p>
+	<sub style="display:block; text-align:left; font-size:13px; line-height:23px;">
+	Vehice reg: <strong>PE18 KLM</strong><br>
+	Valid from: <strong>01/01/2018</strong><br>
+	Expires: <strong>31/12/2018</strong><br>
+	Insured Address: <br>
+	<strong>14 The Street, City, Postcode</strong></sub>
+	</label>
+
+	<input type="radio" id="policy2" name="policy" data-related-item="policydetsconfirm">
+	<label for="policy2" class="icon two">
+	<img src="images/motor.png">
+	<p>Policy no: ABC56789</p>
+	<sub style="display:block; text-align:left; font-size:13px; line-height:23px;">
+	Vehice reg: <strong>P063 PTE</strong><br>
+	Valid from: <strong>13/04/2018</strong><br>
+	Expires: <strong>12/04/2019</strong><br>
+	Insured Address: <br>
+	<strong>55 The Avenue, Another City, Postcode</strong></sub>
+	</label>
+
+	
+<div class="hidden" style="display: block;">
+	<h4>Are the <em>vehicle registration</em> and <em>insured address</em> correct?<span class="info">i</span></h4>
+
+	<input type="radio" id="policydetsconfirm" name="policyconfirm" data-related-item="car1">
+	<label for="policydetsconfirm" id="openheadwho" class="options">Yes, all seems fine</label>
+
+	<input type="radio" id="policydetsconfirmno" name="policyconfirm">
+	<label for="policydetsconfirmno" class="options">No, something is wrong</label>
+</div>
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+<div class="section">
+	
+	<h1 id="headwho"><span>4/5</span><div>Who & Which Vehicle?</div></h1>
+
+<div class="questions">
+
+
+	<h4>Which car was <em>involved in the accident?</em><span class="info">i</span></h4>
+
+	<input type="radio" id="car1" name="car" data-related-item="driverph">
+	<label for="car1" class="icon">
+	<img src="images/motor.png">
+	<p>Volkswagen Golf<br>PE18 KLM</p>
+	</label>
+	
+	<input type="radio" id="car2" name="car" data-related-item="driverph">
+	<label for="car2" class="icon">
+	<img src="images/motor.png">
+	<p>Vauxhall Vectra<br>PO63 TYO</p>
+	</label>	
+
+	<input type="radio" id="carother" name="car" data-related-item="">
+	<label for="carother" class="icon">
+	<img src="images/other.png">
+	<p>Another Vehicle</p>
+	</label>
+
+
+<div class="hidden" style="display: block;">
+
+	<h4>Who was <em>driving?</em><span class="info">i</span></h4>
+
+	<input type="radio" id="driverph" name="driver" data-related-item="driverdetsyes">
+	<label for="driverph" class="icon">
+	<img src="images/person_blue.png" style="height: 60px;">
+	Me
+	</label>
+	
+	<input type="radio" id="driver2" name="driver" data-related-item="driverdetsyes">
+	<label for="driver2" class="icon">
+	<img src="images/person_blue.png" style="height: 60px;">
+	Tabitha Leadbetter
+	</label>	
+
+	<input type="radio" id="driverother" name="driver" data-related-item="driverdetsyes">
+	<label for="driverother" class="icon">
+	<img src="images/other.png" style="height: 60px;">
+	Somebody Else
+	</label>
+
+</div>
+					
+<div class="hidden" style="display: block;">
+
+	<h4>Are the following details shown about you <em>up to date &amp; correct</em>?<span class="info">i</span></h4>
+
+	<table class="driverdetails">
+
+
+	<tr>
+		<td class="data"><h5>Name</h5>Henry Hammersley</td>
+	</tr>
+
+	<tr>	 
+		<td class="data"><h5>Date of birth</h5>11/07/1990</td>
+	</tr>
+
+	<tr>
+		<td class="data"><h5>Occupation</h5>Plumber</td>
+	</tr>
+
+	<tr>
+		<td class="data"><h5>Licence type</h5>Full UK</td>
+	</tr>
+
+	<tr>
+		<td class="data"><h5>Claims & accidents in the last 3 years</h5>2
+		<input type="checkbox" id="more" data-related-item="detail" style="display:none;">
+		<label for="more">
+		<i class="arrow down"></i>
+		</label></td>
+	</tr>
+
+<tr>
+		<td id="detail" class="data">Theft 10/2015</td><br>
+		<td id="detail" class="data">Windscreen Only 06/2017</td>
+</tr>
+	<tr>
+		<td class="data"><h5>Driving offences in the last 5 years</h5>None</td>
+	</tr>
+
+	</table>
+
+
+	<input type="radio" id="driverdetsyes" name="driverconfirm" data-related-item="sdp">
+	<label for="driverdetsyes" class="options">Yes, all seems fine</label>
+
+	<input type="radio" id="driverdetsno" name="driverconfirm">
+	<label for="driverdetsno" class="options">No, something is wrong</label>
+
+</div>
+
+<div class="hidden" style="display: block;">
+
+	<h4>What were you using the vehicle for <em>at the time</em>?<span class="info">i</span></h4>
+	
+	<input type="radio" id="sdp" name="usage" data-related-item="what">
+	<label for="sdp" id="openheadwhat" class="options">SDP</label>
+
+	<input type="radio" id="commuting" name="usage" data-related-item="what">
+	<label for="commuting" id="openheadwhat" class="options">Commuting</label>
+
+
+	<input type="radio" id="business" name="usage" data-related-item="what">
+	<label for="business" id="openheadwhat" class="options">Business use</label>
+
+	<input type="radio" id="useother" name="usage" data-related-item="what">
+	<label for="useother" id="openheadwhat" class="options">Something else</label>
+
+</div>
+
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+<div class="section">
+	
+	<h1 id="headwhat"><span>5/5</span><div>What happened?</div></h1>
+
+<div class="questions">
+
+	<h4>Using the options below tell us <em>what happened</em><span class="info">i</span></h4>
+	<h4 class="label inline">I was</h4>
+	<br>
+	<select name="what" id="what" placeholder="What you were doing">
+	<option disabled selected>Select what were you doing</option>
+	<option> Changing lanes</option>
+	<option> Driving</option>
+	<option> Parked</option>
+	<option> Parking</option>
+	<option> Reversing</option>
+	<option> stationary</option>
+	<option> overtaking</option>
+	</select>
+
+	<select name="what" id="where">
+	<option disabled selected>Select where</option>
+	<option>in a car park</option>
+	<option>on a driveway</option>
+	<option>on a dual carriageway</option>
+	<option>on a forecourt</option>
+	<option>on a motorway</option>
+	<option>on private land</option>
+	<option>on a road</option>
+	<option>on a roundabout</option>
+	<option>on a side road</option>
+	<option>in traffic</option>
+
+	</select>
+<br><br>
+	<h4 class="label inline">when I</h4> 
+	<br>
+	<input type="radio" id="hit" name="whohit">
+	<label for="hit" class="options">Hit</label>
+
+	<input type="radio" id="hitby" name="whohit">
+	<label for="hitby" class="options">Was hit by</label>
+<br><br>
+	<h4 class="label inline"> a</h4>
+	<input pattern=".{3,}" required id="tags" placeholder="Type to search...">
+
+<br><br>
+
+	<h4>Tell us more about the <em>circumstances</em>  of this incident (optional)</h4>
+	<textarea rows="4" pattern=".{5,100}" required style="width: 260px;min-height: 80px;"></textarea>
+
+	<input type="button" id="submitbtn" value="Continue" disabled="disabled">
+
+</div> <!--end of questions-->
+
+</div> <!--end of section-->
+
+
+</div> <!--end of main-->
+
+
+</div> <!--end of wrapper-->
+
+<footer>
+
+<div class="legal">
+
+	<p>Copyright AXA 2018 ©</p>
+	<p>AXA Insurance UK Plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.</p>
+
+</div>
+
+</footer> <!--end of footer-->
+
+
+
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+	<span class="close">&times;</span>
+	<h1>We need to talk to you</h1>
+
+</div>
+
+<div class="modal-body">
+
+	<p>We need to talk to you about this incident to make sure we fully understand what has happened and to help you get back to normal as quickly as possible.</p>
+
+	<p><strong>Please call us on</strong></p><h2>0330 024 1305</h2>
+
+	<p>Lines open: 24 hours a day, every day.</p>
+   
+</div>
+
+</div> <!--end of modal content-->
+
+
+</div> <!--end of myModal-->
+
+
+
+</body>
+
+
+
+
+
+
+<script>
+
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("person");
+var btn2 = document.getElementById("vehicles");
+var btn3 = document.getElementById("accidentother");
+var btn4 = document.getElementById("claimtypeother");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+btn2.onclick = function() {
+    modal.style.display = "block";
+}
+
+btn3.onclick = function() {
+    modal.style.display = "block";
+}
+
+btn4.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+</script>
+
+<script>
+
+var header1 = document.getElementById("when");
+var header2 = document.getElementById("headpolicy");
+var header3 = document.getElementById("headwho");
+var header4 = document.getElementById("headwhat");
+
+var btn1 = document.getElementById("openwhen");
+var btn2 = document.getElementById("openheadpolicy");
+var btn3 = document.getElementById("openheadwho");
+var btn4 = document.getElementById("openheadwhat");
+
+btn1.onclick = function() {
+    header1.style.background = "#fff";
+    header1.style.color = "#000";
+}
+
+btn2.onclick = function() {
+    header2.style.background = "#fff";
+    header2.style.color = "#000";
+}
+
+btn3.onclick = function() {
+    header3.style.background = "#fff";
+    header3.style.color = "#000";
+}
+
+
+btn4.onclick = function() {
+    header4.style.background = "#fff";
+    header4.style.color = "#000";
+}
+
+</script>
+
+
+
+
+
+
+
+<script>
+function evaluate(){
+    var item = $(this);
+    var relatedItem = $("#" + item.attr("data-related-item")).parent();
+   
+    if(item.is(":checked")){
+        relatedItem.fadeIn();
+    }else{
+        relatedItem.fadeOut();   
+    }
+}
+
+$('input[type="checkbox"]').click(evaluate).each(evaluate);
+</script>
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<script>
+  $( function() {
+    var availableTags = [
+  'Animal', 'Bird', 'Dog', 'Cow', 'Horse', 'Pheasant', 'Hedge', 'Stag', 
+  'Pig', 'Sheep', 'Bin', 'Railings', 'Gatepost',  'Carwash', 'Post', 'Plantpot', 'Rock', 'Garage Door', 'Door', 
+  'Deer', 'Wall', 'Lampost', 'Post', 'Central Reservation', 'Trolley', 'Shopping Trolley', 'Trolley Park',
+  'Bike', 'Bike Storage Shelter', 'Bike Rack', 'Bus Stop', 'Box', 'Ditch',
+  'Bollard', 'Fence', 'Car', 'Coach', 'Bus', 'Lorry', 'Caravan', 'Boulder',
+  'Van', 'Motorbike', 'Scooter', 'Truck', 'Electricity Pylon', 'Signpost', 'Field', 'Grass Verge',
+  'Telegraph Pole', 'Bench', 'Street Sign', 'Kerb', 'Pothole', 'Person', 'slate', 'roof slate', 'Roof tile', 'Tile',
+  'Pedestrian', 'Cyclist', 'Gate', 'Postbox', 'Tree',
+  'Bush', 'Barrier', 'Phonebox', 'Bridge', 'House', 'Pillar', 'Car Parts', 'Vehicle Parts', 'Vegetable Rack', 'Shelving',
+  'Building', 'Window', 'Raised Ironworks', 'Tractor', 'Railing', 'Traffic Light',
+  'Horse and Rider', 'Horsebox', 'Parking Meter', 'Ticket Meter', 'Duck', 'Seagull', 'Pigeon', 'Goose', 'Crow', 'Rabbit', 'Badger', 'Fox', 'Cat', 'Hedgehog' 
+];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+</script>
+
+
+
+<script>
+  $( function() {
+    $( "#what"  ).selectmenu();
+
+    $( "#where" ).selectmenu();
+
+    $( "#hit2" ).selectmenu();
+  } );
+</script>
+
+<script>
+
+$("#tags").keyup(function(){
+console.log($(this).val().length);
+if($(this).val().length)
+$("#submitbtn").prop('disabled', false);
+else
+$("#submitbtn").prop('disabled', true);
+});
+
+</script>
